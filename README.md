@@ -1,221 +1,131 @@
-# 🌍 GeoAventura Mundial
+# GeoAventura Mundial
 
-Una aplicación web interactiva para aprender geografía mundial a través de un divertido juego de banderas y países.
+![License](https://img.shields.io/badge/license-MIT-green)
+![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?logo=typescript&logoColor=white)
+![Platform](https://img.shields.io/badge/platform-Web-orange)
+![Next.js](https://img.shields.io/badge/Next.js-15-000000?logo=nextdotjs&logoColor=white)
+
+> A fun, interactive web game to learn world geography through flags and countries.
+
+## Overview
+
+GeoAventura Mundial is an educational game that tests your knowledge of world
+geography. Players must identify countries based on their flags, choosing from
+multiple answers. The app includes more than 190 countries and offers a
+gamified learning experience with light/dark themes and AI integration powered
+by Google Gemini 2.0 Flash.
 
 ![webpreview](https://github.com/user-attachments/assets/eb6988ff-a884-42b5-8408-3291041dab96)
 
-## 📋 Descripción
+## Features
 
-GeoAventura Mundial es un juego educativo que pone a prueba tus conocimientos de geografía mundial. Los jugadores deben identificar países basándose en sus banderas, con múltiples opciones de respuesta. La aplicación incluye más de 190 países y ofrece una experiencia de aprendizaje gamificada.
+- Interactive flag-quiz game with immediate feedback on each answer
+- Complete country database: 190+ countries with names in Spanish and English
+- Customizable quizzes: choose the number of questions (5-190)
+- Score tracking: correct and incorrect answers, final results review
+- Modern responsive UI built with Tailwind CSS and Radix UI
+- Light and dark mode with persisted theme preference
+- AI integration via Google Gemini 2.0 Flash (Genkit)
+- High performance: built with Next.js 15 (Turbopack) and React 18
 
-## ✨ Características
+## Tech Stack
 
-- 🎮 **Juego Interactivo**: Identifica países por sus banderas
-- 🌐 **Base de Datos Completa**: Más de 190 países incluidos
-- 🎯 **Preguntas Personalizables**: Elige la cantidad de preguntas (5-190)
-- 📊 **Sistema de Puntuación**: Seguimiento de respuestas correctas e incorrectas
-- 🎨 **Interfaz Moderna**: Diseño responsivo con Tailwind CSS
-- 🌙 **Modo Oscuro**: Tema claro y oscuro disponibles
-- 🤖 **Integración con IA**: Powered by Google Gemini 2.0 Flash
-- ⚡ **Alto Rendimiento**: Construido con Next.js 15 y React 18
+- **Next.js 15** — React framework (App Router, Turbopack)
+- **React 18** + **TypeScript 5**
+- **Tailwind CSS** + **Radix UI** + **Lucide React** (icons)
+- **Genkit** + **@genkit-ai/googleai** (Google Gemini 2.0 Flash)
+- React Hook Form, Recharts, next-themes
+- Tooling: ESLint, Prettier, Husky
 
-## 🛠️ Tecnologías Utilizadas
+## Requirements
 
-### Frontend
-- **Next.js 15** - Framework de React para aplicaciones web
-- **React 18** - Biblioteca para interfaces de usuario
-- **TypeScript** - Tipado estático para JavaScript
-- **Tailwind CSS** - Framework de CSS utilitario
-- **Radix UI** - Componentes de UI primitivos y accesibles
+- Node.js 18+
+- npm, yarn, pnpm, or bun
+- A Google AI API key (for the Genkit/Gemini features)
 
-### Herramientas de Desarrollo
-- **ESLint** - Linter para código JavaScript/TypeScript
-- **Prettier** - Formateador de código
-- **Husky** - Git hooks para automatización
-- **Turbopack** - Bundler de alta velocidad para desarrollo
+## Installation
 
-### IA y APIs
-- **Genkit** - Framework para aplicaciones de IA
-- **Google AI (Gemini 2.0)** - Modelo de lenguaje para características de IA
+1. Clone the repository:
 
-### Bibliotecas de UI
-- **Lucide React** - Iconos SVG
-- **React Hook Form** - Manejo de formularios
-- **Recharts** - Gráficos y visualizaciones
-- **Next Themes** - Sistema de temas
-
-## 🚀 Instalación y Configuración
-
-### Prerrequisitos
-- Node.js 18+ 
-- npm, yarn, pnpm o bun
-
-### Instalación
-
-1. **Clona el repositorio**
    ```bash
    git clone https://github.com/JoanMike/GeoAventura_Mundial_Game.git
    cd GeoAventura_Mundial_Game
    ```
 
-2. **Instala las dependencias**
+2. Install dependencies:
+
    ```bash
    npm install
-   # o
-   yarn install
-   # o
-   pnpm install
    ```
 
-3. **Configura las variables de entorno**
-   ```bash
-   # Crea un archivo .env.local
-   cp .env.example .env.local
-   
-   # Agrega tu API key de Google AI
-   GOOGLE_AI_API_KEY=tu_api_key_aqui
-   ```
+## Configuration
 
-4. **Ejecuta el servidor de desarrollo**
-   ```bash
-   npm run dev
-   ```
+Create a `.env.local` file in the project root and add your Google AI API key:
 
-5. **Abre tu navegador**
-   Visita [http://localhost:9002](http://localhost:9002) para ver la aplicación.
-
-## 📦 Scripts Disponibles
-
-- `npm run dev` - Inicia el servidor de desarrollo con Turbopack
-- `npm run build` - Construye la aplicación para producción
-- `npm run start` - Inicia el servidor de producción
-- `npm run lint` - Ejecuta ESLint para encontrar problemas de código
-- `npm run typecheck` - Verifica los tipos de TypeScript
-- `npm run format` - Formatea el código con Prettier
-- `npm run genkit:dev` - Inicia el servidor de desarrollo de Genkit
-- `npm run genkit:watch` - Inicia Genkit en modo watch
-
-## 🎮 Cómo Jugar
-
-1. **Configuración del Juego**
-   - Selecciona el número de preguntas que deseas responder (mínimo 5)
-   - Haz clic en "Comenzar Juego"
-
-2. **Jugando**
-   - Se mostrará una bandera de un país
-   - Selecciona el nombre correcto del país entre las 4 opciones
-   - Recibirás retroalimentación inmediata sobre tu respuesta
-
-3. **Resultados**
-   - Al final del juego, verás tu puntuación total
-   - Puedes revisar todas tus respuestas
-   - Opción para jugar nuevamente
-
-## 📁 Estructura del Proyecto
-
+```bash
+GOOGLE_AI_API_KEY=your_api_key_here
 ```
+
+## Usage
+
+Start the development server (runs on port 9002 with Turbopack):
+
+```bash
+npm run dev
+```
+
+Then open [http://localhost:9002](http://localhost:9002) in your browser.
+
+Available scripts:
+
+- `npm run dev` — start the dev server with Turbopack (port 9002)
+- `npm run build` — build the app for production
+- `npm run start` — start the production server
+- `npm run lint` — run ESLint
+- `npm run typecheck` — run the TypeScript type checker
+- `npm run format` — format the code with Prettier
+- `npm run genkit:dev` — start the Genkit dev server
+- `npm run genkit:watch` — start Genkit in watch mode
+
+### How to play
+
+1. Select the number of questions you want to answer (minimum 5) and click
+   "Comenzar Juego".
+2. A country flag is shown — pick the correct country name among 4 options.
+3. At the end, review your total score and every answer, and play again.
+
+## Project Structure
+
+```text
 src/
-├── ai/                    # Configuración de IA y Genkit
-│   ├── genkit.ts         # Configuración principal de Genkit
-│   └── dev.ts            # Archivo de desarrollo para IA
-├── app/                  # App Router de Next.js
-│   ├── layout.tsx        # Layout principal
-│   ├── page.tsx          # Página principal del juego
-│   └── globals.css       # Estilos globales
-├── components/           # Componentes React
-│   ├── game/             # Componentes específicos del juego
-│   │   ├── GameSetup.tsx # Configuración del juego
-│   │   ├── GamePlay.tsx  # Interfaz de juego
-│   │   └── GameResults.tsx # Resultados del juego
-│   ├── ui/               # Componentes de interfaz reutilizables
-│   └── theme-*.tsx       # Componentes de tema
-├── hooks/                # Custom React hooks
-├── lib/                  # Utilidades y lógica de negocio
-│   ├── countries.ts      # Base de datos de países
-│   ├── gameLogic.ts      # Lógica del juego
-│   └── utils.ts          # Utilidades generales
+├── ai/                 # AI configuration (Genkit)
+│   ├── genkit.ts       # Main Genkit configuration
+│   └── dev.ts          # AI development entry point
+├── app/                # Next.js App Router
+│   ├── layout.tsx      # Root layout
+│   ├── page.tsx        # Main game page
+│   └── globals.css     # Global styles
+├── components/         # React components
+│   ├── game/           # Game-specific components
+│   │   ├── GameSetup.tsx    # Game setup screen
+│   │   ├── GamePlay.tsx     # Gameplay interface
+│   │   └── GameResults.tsx  # Results screen
+│   ├── ui/             # Reusable UI components
+│   └── theme-*.tsx     # Theme provider and toggle
+├── hooks/              # Custom React hooks
+└── lib/                # Utilities and business logic
+    ├── countries.ts    # Country database
+    ├── gameLogic.ts    # Game logic
+    └── utils.ts        # General utilities
 ```
 
-## 🌍 Base de Datos de Países
+## License
 
-La aplicación incluye una base de datos completa con:
-- Nombres en español e inglés
-- Códigos ISO 3166-1 alpha-2
-- URLs de banderas de alta calidad
-- Más de 190 países incluidos
+Distributed under the **MIT License**. See [LICENSE](LICENSE) for the full
+license text.
 
-## 🎨 Personalización de Tema
+Copyright (c) 2025 Jose Miguel Maldonado Garcia
 
-La aplicación soporta:
-- **Modo Claro**: Tema por defecto con colores claros
-- **Modo Oscuro**: Tema oscuro para mejor experiencia nocturna
-- **Persistencia**: El tema seleccionado se guarda localmente
+## Author
 
-## 🤖 Integración con IA
-
-El proyecto utiliza Google Gemini 2.0 Flash a través de Genkit para:
-- Generación de contenido dinámico
-- Mejoras en la experiencia de usuario
-- Características futuras de personalización
-
-## 🔧 Configuración Adicional
-
-### Tailwind CSS
-El proyecto utiliza una configuración personalizada de Tailwind con:
-- Colores personalizados para temas
-- Animaciones CSS
-- Componentes reutilizables
-
-### ESLint y Prettier
-- Configuración estricta para mantener calidad de código
-- Formateo automático al hacer commit (Husky)
-
-## 🚀 Despliegue
-
-### Vercel (Recomendado)
-```bash
-npm run build
-# Despliega en Vercel siguiendo sus instrucciones
-```
-
-### Otros Proveedores
-```bash
-npm run build
-npm run start
-```
-
-## 📄 Licencia
-
-Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
-
-## 🤝 Contribución
-
-Las contribuciones son bienvenidas. Por favor:
-
-1. Fork el proyecto
-2. Crea una branch para tu feature (`git checkout -b feature/AmazingFeature`)
-3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
-4. Push a la branch (`git push origin feature/AmazingFeature`)
-5. Abre un Pull Request
-
-## 📞 Soporte
-
-Si tienes problemas o preguntas:
-
-- Abre un [issue](https://github.com/tu-usuario/GeoAventura_Mundial/issues)
-- Revisa la documentación
-- Contacta al equipo de desarrollo
-
-## 🎯 Roadmap
-
-- [ ] Modo multijugador
-- [ ] Estadísticas detalladas
-- [ ] Más tipos de preguntas (capitales, ubicación en mapa)
-- [ ] Sistema de logros
-- [ ] Integración con redes sociales
-- [ ] Modo offline
-- [ ] Aplicación móvil
-
----
-
-**¡Desarrollado con ❤️ para aprender geografía de manera divertida!**
+**Jose Miguel Maldonado Garcia** — [@JoanMike](https://github.com/JoanMike)
